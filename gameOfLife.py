@@ -7,6 +7,7 @@ import os
 import time
 import random
 import sys
+import copy
 
 def displayArray(ar):
     os.system('clear')
@@ -94,12 +95,12 @@ class Game:
         
 def startGame(boardWidth, boardHeight, numGens):
     board = Game.makeBoard(boardWidth, boardHeight, numGens)
-    secondBoard = board 
+    secondBoard = copy.deepcopy(board) 
     displayArray(board)
     i = 0
     while i < numGens:
         board = Game.nextGen(secondBoard)
-        secondBoard = board
+        secondBoard = copy.deepcopy(board)
         displayArray(board)
         i+=1
 
