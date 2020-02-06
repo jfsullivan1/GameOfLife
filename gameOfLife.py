@@ -1,5 +1,5 @@
 #Game of Life
-#John Sullivan & Sofia Rossi
+#John Sullivan & Sofia Rossi & William Ross
 #CSC 310
 #1/29/2020
 
