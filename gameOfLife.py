@@ -109,9 +109,15 @@ def getDimensionsFromUser():
     print("    Game of Life    ")
     print("====================")
 
-    boardWidth = int(input("Please enter a board width: "))
-    boardHeight = int(input("Please enter a board height: "))
-    numGens = int(input("Please enter the number of generations: "))
+    custom = input("Would you like to enter a custom board size? Type Y or N. Default will be 10x10: ")
+    if custom.upper() == 'Y':
+        boardWidth = int(input("Please enter a board width: "))
+        boardHeight = int(input("Please enter a board height: "))
+        numGens = int(input("Please enter the number of generations: "))
+    else:
+        boardHeight = 10
+        boardWidth = 10
+        numGens = int(input("Please enter the number of generations: "))
 
     return boardWidth, boardHeight, numGens
                 
